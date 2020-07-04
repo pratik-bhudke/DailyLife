@@ -1,0 +1,64 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script>
+      $(function () {
+            $( "#datepicker" ).datepicker({
+              changeMonth: true,//this option for allowing user to select month
+              changeYear: true //this option for allowing user to select from year range
+            });
+          });
+    </script>
+  </head><body>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <form class="form-horizontal" role="form" method="POST" action="to_diary.php">
+              <div class="row">
+                <div class="col-md-3 col-xs-3">
+                  <p class="lead text-right">I am feeling</p>
+                </div>
+                <div class="col-md-3 col-xs-3 text-left">
+                  <select class="form-control" name="emotion">
+                    <option value="" selected="selected">Select...</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Angry">Angry</option>
+                    <option value="Surprised">Surprised</option>
+                  </select>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                  <p class="lead text-right">Date</p>
+                </div>
+                <div class="col-md-3 col-xs-3 text-left">
+                  <p>
+                    <input type="text" id="datepicker" class="form-control" name="diary_date">
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <p class="h4">Write something...
+                  <textarea class="form-control" name="content" rows="10" style="overflow:auto;resize:none"></textarea>
+                </p>
+              </div>
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <input class="btn btn-primary btn-sm" type="submit" value="Write this...">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+</body></html>

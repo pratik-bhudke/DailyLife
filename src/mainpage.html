@@ -1,0 +1,95 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="..\js\jquery.min.js"></script>
+    <script type="text/javascript" src="..\js\bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+    <script language="javascript" type="text/javascript">
+      function resizeIframe(obj) {
+                obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+              }
+    </script>
+    <style type="text/css">
+      .bicon{ font-size: 150px }
+                      .micon{ font-size: 120px }
+    </style>
+  </head><body>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="nav nav-pills">
+              <li class="active">
+                <a href="mainpage.html">Home</a>
+              </li>
+              <li>
+                <a href="statistics.html" target="Pratik">Stats</a>
+              </li>
+              <li>
+                <a href="writedairy.html" target="Pratik"><i class="fa fa-border fa-flip-vertical fa-fw fa-lg -square-o fa-pencil-square-o"></i></a>
+              </li>
+              <li>
+                <a href="readdairy.html"><i class="fa fa-book fa-border fa-fw fa-lg text-success"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <a href="writedairy.html" target="show_result">
+          <div class="col-md-4 text-center">
+            <div class="row">
+              <i class="fa fa-5x fa-flip-vertical fa-fw -square-o bicon fa-pencil-square-o"></i>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="text-primary">Write Diary</h1>
+              </div>
+            </div>
+          </div>
+          </a>
+          <a href="readdairy.html">
+          <div class="col-md-4 text-center">
+            <div class="row">
+              <div class="col-md-12">
+                <i class="fa fa-5x fa-book fa-fw text-success bicon"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="text-primary">Read Diary</h1>
+              </div>
+            </div>
+          </div>
+          </a>
+          <a href="statistics.html" target="show_result">
+          <div class="col-md-4 text-center">
+            <div class="row">
+              <div class="col-md-4 col-xs-4 text-center">
+                <i class="fa fa-5x fa-fw fa-smile-o micon text-warning"></i>
+              </div>
+              <div class="col-md-4 col-xs-4 text-center">
+                <i class="fa fa-5x fa-frown-o fa-fw text-muted micon"></i>
+              </div>
+              <div class="col-md-4 col-xs-4 text-center">
+                <i class="fa fa-5x fa-fw fa-meh-o text-danger micon"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="text-center text-primary">Analyze your mood swings</h1>
+              </div>
+            </div>
+          </div>
+          </a>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <iframe class="center-block col-md-12 col-xs-12 flow" frameborder="0" scrolling="no" onload="resizeIframe(this)" id="ifrm" name="show_result"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+</body></html>

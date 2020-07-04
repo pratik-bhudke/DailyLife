@@ -1,0 +1,85 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="..\js\jquery.min.js"></script>
+    <script type="text/javascript" src="..\js\bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script>
+      $(function () {
+            $( "#datepicker" ).datepicker({
+              changeMonth: true,//this option for allowing user to select month
+              changeYear: true //this option for allowing user to select from year range
+            });
+          });
+    </script>
+  </head><body>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="nav nav-pills">
+              <li>
+                <a href="mainpage.html">Home</a>
+              </li>
+              <li>
+                <a href="statistics.html" target="P">Stats</a>
+              </li>
+              <li>
+                <a href="writedairy.html" target="P"><i class="fa fa-border fa-flip-vertical fa-fw fa-lg -square-o fa-pencil-square-o"></i></a>
+              </li>
+              <li>
+                <a href="readdairy.html"><i class="fa fa-book fa-border fa-fw fa-lg text-success"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <form class="form-horizontal" role="form" target="show_result" method="POST" action="diary_date_search.php">
+              <div class="row">
+                <p>Search by date :
+                  <input type="text" id="datepicker" class="form-control" name="diary_date">
+                </p>
+              </div>
+              <div class="row text-center">
+                <input class="btn btn-sm btn-success" type="submit" value="Search...">
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4 text-center">
+            <p class="h1 text-danger">OR</p>
+          </div>
+          <div class="col-md-4">
+            <form class="form-horizontal" role="form" method="POST" action="diary_emotion_search.php" target="show_result">
+              <div class="row">
+                <p>Search by Emotion :
+                  <select class="form-control" name="emotion" target="show_result">
+                    <option value="" selected="selected">Select...</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Angry">Angry</option>
+                    <option value="Surprised">Surprised</option>
+                  </select>
+                </p>
+              </div>
+              <div class="row text-center">
+                <input class="btn btn-sm btn-success" type="submit" value="Search...">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <iframe name="show_result" class="center-block col-md-12 col-xs-12" frameborder="0" scrolling="no" height="100%"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+</body></html>
